@@ -277,7 +277,7 @@ function sortResultsByReviews(sortByReview, hotels) {
   }
 }
 
-app.get('/hotels/sort/review', (req, res) => {
+app.get('/hotels/sort/reviews', (req, res) => {
   let sortByReview = req.query.review;
   let result = sortResultsByReviews(sortByReview, hotels);
   res.json({ hotels: result });
