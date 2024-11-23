@@ -222,10 +222,11 @@ function sortHighToLow(hotel1, hotel2) {
 }
 
 function sortResultsByPrice(sortBy, hotels) {
+  const hotelsCopy = hotels.slice(); 
   if (sortBy === 'low-to-high') {
-    return hotels.sort(sortLowToHigh);
+    return hotelsCopy.sort(sortLowToHigh);
   } else {
-    return hotels.sort(sortHighToLow);
+    return hotelsCopy.sort(sortHighToLow);
   }
 }
 
@@ -246,10 +247,11 @@ function sortRatingHighToLow(hotel1, hotel2) {
 }
 
 function sortResultsByRating(sortByRating, hotels) {
+  const hotelsCopy = hotels.slice(); 
   if (sortByRating === 'low-to-high') {
-    return hotels.sort(sortRatingLowToHigh);
+    return hotelsCopy.sort(sortRatingLowToHigh);
   } else {
-    return hotels.sort(sortRatingHighToLow);
+    return hotelsCopy.sort(sortRatingHighToLow);
   }
 }
 
@@ -270,10 +272,11 @@ function sortReviewMostToLeast(hotel1, hotel2) {
 }
 
 function sortResultsByReviews(sortByReview, hotels) {
+  const hotelsCopy = hotels.slice(); 
   if (sortByReview === 'least-to-most') {
-    return hotels.sort(sortReviewLeastToMost);
+    return hotelsCopy.sort(sortReviewLeastToMost);
   } else {
-    return hotels.sort(sortReviewMostToLeast);
+    return hotelsCopy.sort(sortReviewMostToLeast);
   }
 }
 
