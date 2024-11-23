@@ -287,7 +287,7 @@ app.get('/hotels/sort/reviews', (req, res) => {
   res.json({ hotels: result });
 });
 
-//FILTER BY AMENITY
+//FILTER BY AMENITIES
 
 function filterByAmenity(hotelObj, amenity) {
   return hotelObj.amenity.toLowerCase() === amenity.toLowerCase();
