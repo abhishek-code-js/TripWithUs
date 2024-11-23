@@ -274,6 +274,7 @@ function sortReviewMostToLeast(hotel1, hotel2) {
 function sortResultsByReviews(sortByReview, hotels) {
   const hotelsCopy = hotels.slice(); 
   if (sortByReview === 'least-to-most') {
+    console.log(sortByReview)
     return hotelsCopy.sort(sortReviewLeastToMost);
   } else {
     return hotelsCopy.sort(sortReviewMostToLeast);
@@ -281,7 +282,7 @@ function sortResultsByReviews(sortByReview, hotels) {
 }
 
 app.get('/hotels/sort/reviews', (req, res) => {
-  let sortByReview = req.query.review;
+  let sortByReview = req.query.reviews;
   let result = sortResultsByReviews(sortByReview, hotels);
   res.json({ hotels: result });
 });
